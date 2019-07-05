@@ -84,8 +84,8 @@ if ( have_rows( 'acf_slideshow' ) ) :
 
 							<?php if ( true === get_sub_field( 'add_button' ) ) { ?>
 								<div class="acf-slideshow__button-area">
-									<a href="<?php the_sub_field( 'boton_url' ); ?>" class="button">
-										<?php the_sub_field( 'boton_copy' ); ?>
+									<a href="<?php the_sub_field( 'button_url' ); ?>" class="button">
+										<?php the_sub_field( 'button_copy' ); ?>
 									</a>
 								</div>
 							<?php } ?>
@@ -106,7 +106,7 @@ if ( have_rows( 'acf_slideshow' ) ) :
 					<?php
 					// If we want to add a link gets the internal or external link and the link target.
 					if ( true === get_sub_field( 'link_add' ) ) {
-						$link   = ( 'local' == get_sub_field( 'link_type' ) ) ? get_sub_field( 'link_local' ) : get_sub_field( 'link_external' );
+						$link   = ( 'internal' == get_sub_field( 'link_type' ) ) ? get_sub_field( 'link_internal' ) : get_sub_field( 'link_external' );
 						$target = get_sub_field( 'target' );
 					?>
 						<a class="acf-slideshow__link" href="<?php echo esc_url( $link ); ?>" target="<?php echo esc_attr( $target ) ?>"><span></span></a>
